@@ -1,0 +1,99 @@
+<!-- Dont think people on the website will be able to see this-->
+<!-- the homepage of your file should always be index.html-->
+
+<!DOCTYPE html> <!-- This declares that the file will be in HTML5, the latest vers of HTML-->
+
+
+<html lang=e"en"> <!-- this is the html attriubute  which gives additoional information about HTML elements, explained in the next lesson-->
+<!--Lang attribute specifically makes it such that anyth that accesses the webpage like asssitive reading tech will identify the language correctly and pronounce the words correctly-->
+<!-- <html> Needs to be in every HTML document, reasoning will be explained later-->
+<head> <!-- Head element goes within html element and should always be the first element under the opening html tag-->
+    <meta charset="UTF-8"> <!--this is encoding and it will ensure that the webpage will display special symbols and characters from diff langs correctly in the browser-->
+    <title>My First Website</title> <!--Displays in the browsers tab. if no title it will default to the file name. Makes it harder to user to find out webpage amnong many-->
+</head>
+</html>
+
+
+<body>
+    <h1>Hello!</h1>
+    <p>I am learning HTML.</p>
+</body>
+</html>
+
+<body>
+    <p> &lt;p&gt; This is a HTML tag, with the HTML element p, which demarkets the type of container the tag will be.
+        In this case it's paragraph.
+    </p>
+</body>
+
+<!--
+This is a note to myself.
+The browser won't display any of this.
+I can write multiple lines here.
+-->
+
+<!-- FOR PRINTING < and > and & in the website
+| What you type | What appears |
+| ------------- | ------------ |
+| `&lt;`        | `<`          |
+| `&gt;`        | `>`          |
+| `&amp;`       | `&`          |
+-->
+
+<!-- Below is the equivalent of a debugger for html-->
+<!--https://validator.w3.org/nu/#file-->
+
+<p> This is a paragraph of text. No matter how many lines of spacing i put in this paragraph it will always print one continuous loop.</p>
+
+<p> Unless i make another paragraph.</p>
+
+<h1> This heading is the biggest, the other headings h2 to h6 will be used in subsets of the h1 headings</h1>
+
+<p> Use strong element to bold text <strong> like this</strong>.</p>
+<p>Likewise, use em element to make text italic, <em>like this</em>.</p>
+
+<body>
+    <p>Nested elements are often indented. Nested elements are elements that are within another set of elements. The outer one is considered the parent while the inner one is considered the child. There can be siblings for the child ones.</p>
+    <p> This is a sibling of the above paragraph, who are both a child of the body element.</p>
+</body>
+
+<ul>
+    <li>This is an unordered list</li>
+    <li>Where the order does not matter, ie theyll be like js dots</li>
+    <li>use ul element for parent and li elements for child</li>
+</ul>
+
+<ol>
+    <li>This is an ordered list</li>
+    <li> each element in this list is tagged to a number on the very left</li>
+</ol>
+
+
+<h1>Now were going to play around with links and images yay</h1>
+<p>an anchor element a is needed to add links to a text, add the attribute &lt;a href=(link)&gt; to the anchor element</p>
+<!--href stands for hypertext reference-->
+<!--By default, any text wrapped with an anchor tag without an href attribute will look like plain text.
+If the href attribute is present, the browser will give the text a blue color and underline it to signify it is a link.-->
+<p>this will connects the link to the anchor and allows the anchor to send users to the link by clicking on it</p>
+<a href="https://www.theodinproject.com/about">About The Odin Project</a>
+<p>This will open the link in the same tab, if nothing is indicated def will be this</p>
+<p> anchor tags can be used to add links to anything, not js other html projects</p>
+<!--But for the purposes of a webpage, u will be linking mostly to html documents duh-->
+<p> if you want the link in a different new tab, need to add another attribute called target attribute. target = _self is the def. target=_blank is new tab</p>
+<a href="https://www.theodinproject.com/about" target="_blank" rel="noreferrer">About The Odin Project</a>
+
+<!--rel describes the relationship between your page and the page you're linking to.
+rel="noopener" is a security feature that prevents a newly opened page (target="_blank") from accessing or manipulating the original page, helping prevent attacks like tabnabbing.
+rel="noreferrer" does the same thing but also prevents the destination from seeing information about where the visitor came from (the referrer).
+In short, noopener = don't let the new page control my page; noreferrer = don't let it control my page or know where I came from.-->
+<p>Links to pages on other websites -> absolute links. Consist of scheme://domain/path. like for eg https://www.theodinproject.com/about</p>
+<p>Links to pages on same website -> relative links. No need domain bcos its the same</p>
+<p>Need create another file in the same directory(folder) and js link the file name uw it to go to in the anchor file</p>
+<p> <a href="about.html">About</a></p>
+<p>after i moved the file into a folder within the main folder, use ./(name of folder)/ to link to the file within the folder</p>
+<a href="./pages/about.html"> About </a>
+
+  <img src="./images/dog.jpg" alt="dog">
+  <!--img is a void element, no closing tag cos no content-->
+  <p>if we are coming from the about page? Go to <a href="./pages/about.html"> About </a> page</p>
+<p>alt attribute in img ensures that the text in alt appears if the image is unable to, and is used for screen readers to describe what the image looks like to the visually impaired</p>
